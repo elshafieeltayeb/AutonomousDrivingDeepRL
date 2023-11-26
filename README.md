@@ -11,7 +11,7 @@ are included in the [releases repository](https://github.com/Microsoft/AirSim/re
 
 The followings are used to facilitate training models:
 
-*[OpenAI Gym](https://gym.openai.com/
+*[OpenAI Gym](https://gym.openai.com/)
 *[AirSim](https://github.com/microsoft/AirSim)
 
 DRL algorithms:
