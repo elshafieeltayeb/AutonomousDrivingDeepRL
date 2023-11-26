@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "ad-drl"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+atari-py = "^0.2.9"
+gym-super-mario-bros = "^7.4.0"
+matplotlib = "^3.7.2"
+numpy = "^1.24.0"
+pillow = "^10.0.0"
+tensorboard = "^2.14.0"
+tensorboardx = "^2.6.2.2"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+tqdm = "^4.66.1"
+opencv-python = "^4.8.0.76"
+cmake = "^3.27.4.1"
+wget = "^3.2"
+stable-baselines3 = {extras = ["extra"], version = "^2.1.0"}
+black = "^23.9.1"
+msgpack-rpc-python = "^0.4.1"
+geopy = "^2.4.0"
+#gymnasium = {extras = ["accept-rom-license", "all"], version = "^0.29.1"}
+#dask = {extras= ["distributed"], version = "^2023.9.2"}
+dask = "^2023.9.2"
+seaborn = "^0.13.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+poetry2setup = "^1.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+tensorflow-m1 = ["tensorflow-macos", "tensorflow-metal"]
+tensorflow-x64 = ["tensorflow"]
