@@ -9,19 +9,21 @@ The 3D environments used in this project including the AirsSim plugin [AirSim](h
 are included in the [releases repository](https://github.com/Microsoft/AirSim/releases)
 
 
-The followings are used to facilitate training models:
+The following are used to facilitate training models:
 
-*[OpenAI Gym](https://gym.openai.com/)
-*[AirSim](https://github.com/microsoft/AirSim)
+* [OpenAI Gym](https://gym.openai.com/)
+* [AirSim](https://github.com/microsoft/AirSim)
+
 
 DRL algorithms:
 * DQN
 
+## setup
 * Download the AirSim environment from [releases repository](https://github.com/Microsoft/AirSim/releases)
 * Run the environment Binary 
 * run `poetry install`
 * run `pip install msgpack-rpc-python` &  `pip install airsim`
-* (optional) install tensorflow using `conda install -c apple tensorflow-deps` then `pip install tensorflow-macos`
+* (optional) Install Tensorflow using `conda install -c apple tensorflow-deps` then `pip install tensorflow-macos`
 
 
 ## How to train
@@ -54,12 +56,10 @@ actions = 7
 ```
 * Training
   ```
-  python main.py --train_dqn --dqn_type=DQN || DoubleDQN || DuelDQN || DDDQN --folder_name=[YOUR NAME]
-  python run.py --train_dqn --dqn_type=DQN --folder_name=training_data
+  python run.py --train_dqn --dqn_type=DQN
   ```
 * Testing
   ```
-  python main.py --test_dqn --dqn_type=DQN || DoubleDQN || DuelDQN || DDDQN --model_path=[YOUR MODEL PATH]
   python main.py --test_dqn --dqn_type=DDDQN --model_path=./model/best/dqn.cpt
   ```
 * Plot
